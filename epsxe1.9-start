@@ -1,0 +1,42 @@
+#!/bin/sh
+if test ! -e $HOME/.epsxe1.9
+then
+	mkdir $HOME/.epsxe1.9
+fi
+
+for i in bios cfg cheats memcards patches snap sstates
+do
+    if test ! -e $HOME/.epsxe1.9/$i
+    then
+	mkdir $HOME/.epsxe1.9/$i
+    fi
+done
+
+for i in plugins docs shaders epsxe keycodes.lst
+do
+    if test ! -e $HOME/.epsxe1.9/$i
+    then
+	ln -s /usr/lib/epsxe1.9/$i $HOME/.epsxe1.9/
+    fi
+done
+
+for i in /usr/lib/epsxe1.9/cfg/*
+do
+    fnm=`echo $i | sed s,/usr/lib/epsxe1.9/cfg/,,g`
+    if test ! -e $HOME/.epsxe1.9/cfg/$fnm
+    then
+	ln -s $i $HOME/.epsxe1.9/cfg/
+    fi
+done
+
+for i in /usr/lib/epsxe1.9/extra/*.cfg
+do
+    fnm=`echo $i | sed s,/usr/lib/epsxe1.9/extra/,,g`
+    if test ! -e $HOME/.epsxe1.9/cfg/$fnm
+    then
+	cp $i $HOME/.epsxe1.9/cfg/
+    fi
+done
+
+cd $HOME/.epsxe1.9
+exec ./epsxe
