@@ -9,7 +9,7 @@
 Summary:	Sony PlayStation emulator
 Name:		%{oname}%{major}
 Version:	%{major}.%{minor}
-Release:	2
+Release:	3
 License:	Freeware
 Group:		Emulators
 Url:		http://www.epsxe.com
@@ -40,7 +40,7 @@ Requires:	libgtk-x11-2.0.so.0
 Requires:	libjson.so.0
 Requires:	libm.so.6
 Requires:	libncurses.so.5
-Requires:	libncursesw.so.5
+Requires:	libncursesw.so.6
 Requires:	libnsl.so.1
 Requires:	libogg.so.0
 Requires:	libpango-1.0.so.0
