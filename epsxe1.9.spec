@@ -9,7 +9,7 @@
 Summary:	Sony PlayStation emulator
 Name:		%{oname}%{major}
 Version:	%{major}.%{minor}
-Release:	3
+Release:	4
 License:	Freeware
 Group:		Emulators
 Url:		http://www.epsxe.com
