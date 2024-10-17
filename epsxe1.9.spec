@@ -12,7 +12,7 @@ Version:	%{major}.%{minor}
 Release:	4
 License:	Freeware
 Group:		Emulators
-Url:		http://www.epsxe.com
+Url:		https://www.epsxe.com
 Source0:	%{oname}190lin.zip
 Source1:	%{oname}-%{major}-plugins.tar.bz2
 Source2:	%{oname}%{major}-start
